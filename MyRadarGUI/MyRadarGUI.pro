@@ -17,7 +17,6 @@ SOURCES += \
     src/map/china_loader.cpp \
     src/map/dbf.cpp \
     src/map/loader.cpp \
-    src/map/map_data.cpp \
     src/map/shp.cpp \
     src/radarGUI/main.cpp \
     src/radarGUI/mainwindow.cpp
@@ -28,7 +27,6 @@ HEADERS += \
     include/map/china_loader.h \
     include/map/dbf.h \
     include/map/loader.h \
-    include/map/map_data.h \
     include/map/shp.h \
     include/radarGUI/mainwindow.h \
     package/shape/shapefil.h
@@ -48,7 +46,7 @@ win32-msvc* {
     QMAKE_CFLAGS += /wd4996
 }
 
-
+QMAKE_PROJECT_DEPTH = 0
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
